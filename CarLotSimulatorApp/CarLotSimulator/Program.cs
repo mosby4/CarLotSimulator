@@ -7,11 +7,49 @@ namespace CarLotSimulator
         static void Main(string[] args)
         {
             //TODO
-
+            var Lot = new CarLot();
+           
             //Create a seperate class file called Car
             //Car shall have the following properties: Year, Make, Model, EngineNoise, HonkNoise, IsDriveable
             //Car shall have the following methods: MakeEngineNoise(), MakeHonkNoise()
             //The methods should take one string parameter: the respective noise property
+
+            var DreamCar = new Car();
+            DreamCar.Year = 1961;
+            DreamCar.Make = "Ferrari";
+            DreamCar.Model = "250 GT California";
+            DreamCar.EngineNoise = "v12 screaming!";
+            DreamCar.HonkNoise = "Move b#%## GET OUT THE WAY!";
+            //DreamCar.IsDriveable = "Drive at your own RISK!";
+
+            Lot.Cars.Add(DreamCar);
+
+            var Ferrari = new Car()
+            {
+                Year = 1962,
+                Make = "Ferrari",
+                Model = "250 gto",
+                EngineNoise = "BRAAAAAAAP!",
+                HonkNoise = "Beep! Beep!",
+                //IsDriveable = "Drive at your own Risk!",
+            };
+
+            Lot.Cars.Add(Ferrari);
+
+            var MyfirstTruck = new Car(1983, "Chevy","C10","Rumbleee","Hooonk",true );
+
+            Ferrari.MakeEngineNoise(Ferrari.EngineNoise);
+            Console.WriteLine();
+            MyfirstTruck.MakeEngineNoise(MyfirstTruck.EngineNoise);
+            Console.WriteLine();
+            DreamCar.MakeEngineNoise(DreamCar.EngineNoise);
+            Console.WriteLine();
+            Lot.Cars.Add(MyfirstTruck);
+
+            foreach (var Car in Lot.Cars)
+            {
+                Console.WriteLine($"Year:{Car.Year} Make: {Car.Make} Model: {Car.Model} ");
+            }
 
 
             //Now that the Car class is created we can instanciate 3 new cars
