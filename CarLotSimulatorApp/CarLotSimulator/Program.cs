@@ -50,7 +50,27 @@ namespace CarLotSimulator
             {
                 Console.WriteLine($"Year:{Car.Year} Make: {Car.Make} Model: {Car.Model} ");
             }
+            var vehicle = new Car()
+            {
+                Year = 2023,
+                Make = "International",
+                Model = "Scout",
+            };
+            var autoMobile = new Car()
+            {
+                Year = 2010,
+                Make = "Volkswagen",
+                Model = "Jetta",
+            };
 
+            var dailyCommuter = new Car()
+            {
+                Year = 2010,
+                Make = "Chevrolet",
+                Model = "Silveradoooooo",
+            };
+
+            Console.WriteLine($"The total number of cars created is {CarLot.numberOfCars}");
 
             //Now that the Car class is created we can instanciate 3 new cars
             //Set the properties for each of the cars
